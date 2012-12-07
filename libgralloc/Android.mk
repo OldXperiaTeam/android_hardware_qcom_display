@@ -32,6 +32,10 @@ ifeq ($(TARGET_BOARD_PLATFORM),msm7x27)
     LOCAL_CFLAGS += -DANCIENT_GL
 endif
 
+ifeq ($(BOARD_USES_ECLAIR_LIBCAMERA),true)
+    LOCAL_CFLAGS += -DECLAIR_LIBCAMERA
+endif
+
 #MemAlloc Library
 include $(CLEAR_VARS)
 LOCAL_MODULE           := libmemalloc
