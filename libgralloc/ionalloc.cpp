@@ -130,11 +130,7 @@ int IonAlloc::alloc_buffer(alloc_data& data)
             ALOGE("%s: Failed to map the allocated memory: %s",
                   __FUNCTION__, strerror(errno));
             ioctl(mIonFd, ION_IOC_FREE, &handle_data);
-<<<<<<< HEAD
             if(ionSyncFd >= 0)
-=======
-	    if(ionSyncFd >= 0)
->>>>>>> bd6a154... qcom/display: build for all qcom's not just msm8960. Based on CM10 qcom display sources
                 close(ionSyncFd);
             ionSyncFd = FD_INIT;
             return err;
