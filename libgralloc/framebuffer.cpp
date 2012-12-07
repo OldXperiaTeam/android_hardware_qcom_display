@@ -161,12 +161,10 @@ static int fb_post(struct framebuffer_device_t* dev, buffer_handle_t buffer)
 static int fb_compositionComplete(struct framebuffer_device_t* dev)
 {
     // TODO: Properly implement composition complete callback
-<<<<<<< HEAD
-
-=======
+#ifdef ANCIENT_GL
     glFinish();
->>>>>>> bd6a154... qcom/display: build for all qcom's not just msm8960. Based on CM10 qcom display sources
     return 0;
+#endif
 }
 
 int mapFrameBufferLocked(struct private_module_t* module)

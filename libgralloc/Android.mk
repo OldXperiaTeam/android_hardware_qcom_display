@@ -28,6 +28,10 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
 LOCAL_SRC_FILES               :=  gpu.cpp gralloc.cpp framebuffer.cpp mapper.cpp
 include $(BUILD_SHARED_LIBRARY)
 
+ifeq ($(TARGET_BOARD_PLATFORM),msm7x27)
+    LOCAL_CFLAGS += -DANCIENT_GL
+endif
+
 #MemAlloc Library
 include $(CLEAR_VARS)
 LOCAL_MODULE           := libmemalloc
