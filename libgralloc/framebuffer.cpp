@@ -163,8 +163,8 @@ static int fb_compositionComplete(struct framebuffer_device_t* dev)
     // TODO: Properly implement composition complete callback
 #ifdef ANCIENT_GL
     glFinish();
-    return 0;
 #endif
+    return 0;
 }
 
 int mapFrameBufferLocked(struct private_module_t* module)
